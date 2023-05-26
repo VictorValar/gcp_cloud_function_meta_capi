@@ -2,8 +2,9 @@ import functions_framework
 import logging
 import traceback
 import json
+from app.app import event_handler
 @functions_framework.http
-def hello_http(request):
+def main(request):
     """HTTP Cloud Function.
     Args:
         request (flask.Request): The request object.
@@ -24,7 +25,7 @@ def hello_http(request):
     logging.info(msg=f'payload: {json.dumps(payload, indent=4, sort_keys=True)}')
 
     try:
-        response = main(paylod=payload)
+        response = event_handler(payload)
         logging.info(msg=f'response: {json.dumps(response, indent=4, sort_keys=True)}')
         return response
 
