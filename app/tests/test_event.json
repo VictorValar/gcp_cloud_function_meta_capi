@@ -1,0 +1,27 @@
+{
+   "user_data":{
+      "user_id":"AAXXXAA",
+      "payment_type":"pix",
+      "transaction_id":"CCCXXXCCC",
+      "transaction_value":300,
+      "transaction_time":"2021-01-01T00:00:00.000Z"
+   },
+   "items":[
+     {
+         "item_id":"prod_id",
+         "quantity":1,
+         "price":150,
+         "item_brand":"brand a",
+         "item_name":"desc",
+         "item_category":"cat"
+      },
+        {
+             "item_id":"prod_id2",
+             "quantity":1,
+             "price":150,
+             "item_brand":"brand b",
+             "item_name":"desc",
+             "item_category":"cat"
+        }
+   ]
+}
