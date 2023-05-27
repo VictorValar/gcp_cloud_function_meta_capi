@@ -25,7 +25,7 @@ def event_handler(payload):
 
     for item in items:
         content = Content(
-            product_id=item.get('item_id'),
+            product_id=item.get('id'),
             quantity=item.get('quantity'),
             item_price=item.get('price'),
             brand=item.get('item_brand'),
@@ -45,7 +45,7 @@ def event_handler(payload):
     )
 
     event = Event(
-        event_name='purchase',
+        event_name='Purchase',
         event_time=int(payload.get('user_data').get('transaction_time')),
         user_data=user_data,
         custom_data=custom_data,
