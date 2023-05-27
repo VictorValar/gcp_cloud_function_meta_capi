@@ -1,8 +1,3 @@
 python-dotenv
 functions_framework
-# Meta
-facebook_business
-
-
-# Meta
 facebook_business
