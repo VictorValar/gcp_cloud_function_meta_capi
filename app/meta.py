@@ -32,6 +32,5 @@ def send_events(events: list) -> EventResponse:
         )
 
     event_response = event_request.execute()
-    logging.info(f'##### Purchase event sent to meta: {event_response}')
 
     return event_response

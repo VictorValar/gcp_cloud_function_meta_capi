@@ -26,15 +26,19 @@ def main(request):
 
     try:
         response = event_handler(payload)
-        logging.info(msg=f'response: {json.dumps(response, indent=4, sort_keys=True)}')
-        return response
+
+        if response.events_received == 0:
+            raise ValueError('No events received')
+
+        logging.info(f'##### Events event sent to Meta: {response}')
+        return str(response)
 
     except Exception as excp:
         traceback.print_exc()
         logging.error(excp)
         return {
             'statusCode': 400 if type(excp) == ValueError else 500,
-            'body': f'event not sent: {str(excp)} {str(traceback.format_exc())}',
+            'body': f' ##### Exception occurred: {str(excp)} {str(traceback.format_exc())}',
         }
 
 
