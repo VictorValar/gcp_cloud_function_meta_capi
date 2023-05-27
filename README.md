@@ -12,6 +12,9 @@ The access token and pixel ID can be found in the Facebook Events Manager.
 
 The ENV variable is used to determine if the function is running in production or not, used in conjunction with the TEST_EVENT_CODE to send test events to the Events Manager.
 
+## Updating the function to suit your needs
+You must update the **event_handler()** function to process your payload data.
+
 ## Testing
 You may find pytest test files in app/tests.
 Don't forget to set the TEST_EVENT_CODE environment variable. otherwise you'll polute the pixel data.
