@@ -8,7 +8,7 @@
    },
    "items":[
      {
-         "item_id":"prod_id",
+         "id":"prod_id",
          "quantity":1,
          "price":150,
          "item_brand":"brand a",
@@ -16,7 +16,7 @@
          "item_category":"cat"
       },
         {
-             "item_id":"prod_id2",
+             "id":"prod_id2",
              "quantity":1,
              "price":150,
              "item_brand":"brand b",
